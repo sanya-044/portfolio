@@ -1,0 +1,3 @@
+export const aboutmeDescription ="I’m Sisvanth Kumar Sathivadivel, a full-stack software engineer focused on building reliable, scalable products. I design clean backend architecture, craft secure APIs and microservices, and ship fast, responsive interfaces—turning complex ideas into polished experiences that perform in the real world."
+export const tagline = "I'm mostly the following"
+export const tags = ["I DESIGN", "I DEVELOP", "I GET THINGS DONE"]
