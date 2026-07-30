@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+ import React, { useRef, useState } from "react";
 import { navLinks } from "../../constants/navbarConstants";
 import "./NavBar.scss";
 import gsap from "gsap";
