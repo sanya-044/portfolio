@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/all";
@@ -6,147 +6,59 @@ import "./TechStack.scss";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// Frontend icons
-const reactIcon = "/assets/images/tech-icons/reactjsIcon.svg";
 const htmlIcon = "/assets/images/tech-icons/htmlIcon.svg";
 const cssIcon = "/assets/images/tech-icons/cssIcon.svg";
-const jsIcon = "/assets/images/tech-icons/javascriptIcon.svg";
-const tsIcon = "/assets/images/tech-icons/typescriptIcon.svg";
-const jqueryIcon = "/assets/images/tech-icons/jqueryIcon.svg";
 const tailwindIcon = "/assets/images/tech-icons/tailwindIcon.svg";
-const gsapIcon = "/assets/images/tech-icons/gsapIcon.svg";
-const sassIcon = "/assets/images/tech-icons/sassIcon.svg";
-
-// Backend icons
-const javaIcon = "/assets/images/tech-icons/javaIcon.svg";
-const springIcon = "/assets/images/tech-icons/springIcon.svg";
-const apiIcon = "/assets/images/tech-icons/apiIcon.svg";
-const junitIcon = "/assets/images/tech-icons/junitIcon.svg";
-const swaggerIcon = "/assets/images/tech-icons/swaggerIcon.svg";
-const microservicesIcon = "/assets/images/tech-icons/microservicesIcon.svg";
-
-// Database icons
-const postgresIcon = "/assets/images/tech-icons/postgresIcon.svg";
+const jsIcon = "/assets/images/tech-icons/javascriptIcon.svg";
+const reactIcon = "/assets/images/tech-icons/reactjsIcon.svg";
+const nodeIcon = "/assets/images/tech-icons/nodeIcon.svg";
+const expressIcon = "/assets/images/tech-icons/expressIcon.svg";
 const mongoIcon = "/assets/images/tech-icons/mongoIcon.svg";
-const redisIcon = "/assets/images/tech-icons/redisIcon.svg";
-const mysqlIcon = "/assets/images/tech-icons/mysqlIcon.svg";
-const h2Icon = "/assets/images/tech-icons/h2Icon.svg";
-
-// Cloud & DevOps icons
-const awsIcon = "/assets/images/tech-icons/awsIcon.svg";
-const s3Icon = "/assets/images/tech-icons/s3Icon.svg";
-const ec2Icon = "/assets/images/tech-icons/ec2Icon.svg";
-const lambdaIcon = "/assets/images/tech-icons/lambdaIcon.svg";
-const cloudfrontIcon = "/assets/images/tech-icons/cloudfrontIcon.svg";
-const dynamoDbIcon = "/assets/images/tech-icons/dynamodbIcon.svg";
-const dockerIcon = "/assets/images/tech-icons/dockerIcon.svg";
-const githubActionsIcon = "/assets/images/tech-icons/githubActionsIcon.svg";
-const ciCdIcon = "/assets/images/tech-icons/ciCdIcon.svg";
-
-// Tools icons
-const postmanIcon = "/assets/images/tech-icons/postmanIcon.svg";
-const eclipseIcon = "/assets/images/tech-icons/eclipseIcon.svg";
+const javaIcon = "/assets/images/tech-icons/javaIcon.svg";
+const pythonIcon = "/assets/images/tech-icons/pythonIcon.svg";
+const gitIcon = "/assets/images/tech-icons/gitIcon.svg";
+const githubIcon = "/assets/images/tech-icons/githubActionsIcon.svg";
 const vscodeIcon = "/assets/images/tech-icons/vscodeIcon.svg";
-const figmaIcon = "/assets/images/tech-icons/figmaIcon.svg";
-const msOfficeIcon = "/assets/images/tech-icons/msOfficeIcon.svg";
-const jiraIcon = "/assets/images/tech-icons/jiraIcon.svg";
+const postmanIcon = "/assets/images/tech-icons/postmanIcon.svg";
 
 const SECTIONS = [
     {
         label: "FRONTEND",
-        techs: [
-            "React.js",
-            "HTML",
-            "CSS",
-            "Java Script",
-            "Type Script",
-            "JQuery",
-            "Tailwind",
-            "GSAP",
-            "SASS",
-        ],
+        techs: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "React.js"],
     },
     {
         label: "BACKEND",
-        techs: [
-            "Java",
-            "Spring Boot",
-            "Spring MVC",
-            "Spring Security",
-            "REST APIs",
-            "JUnit",
-            "Micro services",
-            "Swagger",
-        ],
+        techs: ["Node.js", "Express.js", "Java", "Python"],
     },
-    { label: "DATABASE", techs: ["Postgre SQL", "MongoDB", "Redis", "MySQL", "H2"] },
+    { 
+        label: "DATABASE", 
+        techs: ["MongoDB"] 
+    },
     {
-        label: "CLOUD & DEVOPS",
-        techs: [
-            "AWS",
-            "S3",
-            "EC2",
-            "Lambda",
-            "CloudFront",
-            "Dynamo DB",
-            "Docker",
-            "GitHub Actions",
-            "CI/CD",
-        ],
+        label: "TOOLS",
+        techs: ["Git", "GitHub", "Visual Studio Code", "Postman"],
     },
-    { label: "Tools", techs: ["Postman", "Eclipse", "Visual Studio Code", "Figma", "MS Office", "JIRA"] },
 ];
 
 const TECH_ICONS = {
+    "HTML5": htmlIcon,
+    "CSS3": cssIcon,
+    "Tailwind CSS": tailwindIcon,
+    "JavaScript": jsIcon,
     "React.js": reactIcon,
-    HTML: htmlIcon,
-    CSS: cssIcon,
-    "Java Script": jsIcon,
-    "Type Script": tsIcon,
-    JQuery: jqueryIcon,
-    Tailwind: tailwindIcon,
-    GSAP: gsapIcon,
-    SASS: sassIcon,
-
-    Java: javaIcon,
-    "Spring Boot": springIcon,
-    "Spring MVC": springIcon,
-    "Spring Security": springIcon,
-    "REST APIs": apiIcon,
-    JUnit: junitIcon,
-    "Micro services": microservicesIcon,
-    Swagger: swaggerIcon,
-
-    "Postgre SQL": postgresIcon,
-    MongoDB: mongoIcon,
-    Redis: redisIcon,
-    MySQL: mysqlIcon,
-    H2: h2Icon,
-
-    AWS: awsIcon,
-    S3: s3Icon,
-    EC2: ec2Icon,
-    Lambda: lambdaIcon,
-    CloudFront: cloudfrontIcon,
-    "Dynamo DB": dynamoDbIcon,
-    Docker: dockerIcon,
-    "GitHub Actions": githubActionsIcon,
-    "CI/CD": ciCdIcon,
-
-    Postman: postmanIcon,
-    Eclipse: eclipseIcon,
+    "Node.js": nodeIcon,
+    "Express.js": expressIcon,
+    "MongoDB": mongoIcon,
+    "Java": javaIcon,
+    "Python": pythonIcon,
+    "Git": gitIcon,
+    "GitHub": githubIcon,
     "Visual Studio Code": vscodeIcon,
-    Figma: figmaIcon,
-    "MS Office": msOfficeIcon,
-    JIRA: jiraIcon,
+    "Postman": postmanIcon,
 };
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-/**
- * @author Sisvanthkumar Sathivadivel
- * @returns TechStack component that creates an interactive 3D showcase of technologies. As the user scrolls, they navigate through a virtual space filled with tech cards and stars. The cards display technology names, icons, and metadata, while the stars create a dynamic background. The component uses GSAP for smooth animations and ScrollTrigger for scroll-based interactions, creating an engaging way to present the tech stack.
- */
 export default function TechStack() {
     const sectionRef = useRef(null);
     const viewportRef = useRef(null);
@@ -160,34 +72,30 @@ export default function TechStack() {
 
         const getConfig = () => {
             const w = window.innerWidth;
-            const h = window.innerHeight;
-            const mobile = w < 640;
+            const mobile = w < 768;
 
             return {
-                starCount: mobile ? 90 : 150,
-                zGap: mobile ? 520 : 800,
-                camSpeed: mobile ? 2.0 : 2.5,
+                starCount: mobile ? 60 : 120,
+                zGap: mobile ? 450 : 750,
+                camSpeed: 2.2,
                 internalLerp: 0.12,
                 velLerp: 0.18,
                 velScale: 0.00035,
-                velClamp: mobile ? 1.0 : 1.25,
-                tiltMul: mobile ? 18 : 45,
-                shadowMul: mobile ? 18 : 40,
-
-                radiusX: Math.min(w * (mobile ? 0.22 : 0.32), 520),
-                radiusY: Math.min(h * (mobile ? 0.18 : 0.30), 420),
-
-                baseFov: mobile ? 760 : 1000,
+                velClamp: 1.2,
+                tiltMul: mobile ? 12 : 35,
+                shadowMul: 30,
+                radiusX: mobile ? 140 : 380,
+                radiusY: mobile ? 100 : 260,
+                baseFov: mobile ? 700 : 900,
             };
         };
 
-        let cleanup = () => { };
+        let cleanup = () => {};
         let raf = 0;
 
         const build = () => {
             cleanup();
             const CONFIG = getConfig();
-
             worldEl.innerHTML = "";
 
             const items = [];
@@ -209,7 +117,6 @@ export default function TechStack() {
             const pushCard = (domain, tech) => {
                 const el = document.createElement("div");
                 el.className = "hs-item";
-
                 const card = document.createElement("div");
                 card.className = "hs-card";
 
@@ -217,19 +124,19 @@ export default function TechStack() {
                 const iconSrc = TECH_ICONS[tech];
 
                 card.innerHTML = `
-          <div class="hs-card-header">
-            <span class="hs-card-id">ID-${randId}</span>
-            <div class="hs-dot"></div>
-          </div>
-          <h2>${tech}</h2>
-          <div class="hs-card-meta">DOMAIN: ${domain}</div>
-          ${iconSrc ? `<img class="hs-tech-icon" src="${iconSrc}" alt="${tech} icon" loading="lazy" />` : ""}
-          <div class="hs-card-footer">
-            <span>GRID: ${Math.floor(Math.random() * 10)}x${Math.floor(Math.random() * 10)}</span>
-            <span>DATA_SIZE: ${(Math.random() * 100).toFixed(1)}MB</span>
-          </div>
-          <div class="hs-card-ghost">0${idx}</div>
-        `;
+                  <div class="hs-card-header">
+                    <span class="hs-card-id">ID-${randId}</span>
+                    <div class="hs-dot"></div>
+                  </div>
+                  <h2>${tech}</h2>
+                  <div class="hs-card-meta">DOMAIN: ${domain}</div>
+                  ${iconSrc ? `<img class="hs-tech-icon" src="${iconSrc}" alt="${tech} icon" loading="lazy" />` : ""}
+                  <div class="hs-card-footer">
+                    <span>GRID: ${Math.floor(Math.random() * 10)}x${Math.floor(Math.random() * 10)}</span>
+                    <span>DATA_SIZE: ${(Math.random() * 100).toFixed(1)}MB</span>
+                  </div>
+                  <div class="hs-card-ghost">0${idx}</div>
+                `;
 
                 el.appendChild(card);
                 worldEl.appendChild(el);
@@ -237,7 +144,7 @@ export default function TechStack() {
                 const angle = (idx / totalCount) * Math.PI * 6;
                 const x = Math.cos(angle) * CONFIG.radiusX;
                 const y = Math.sin(angle) * CONFIG.radiusY;
-                const rot = (Math.random() - 0.5) * 30;
+                const rot = (Math.random() - 0.5) * 20;
 
                 items.push({ el, type: "card", x, y, rot, baseZ: -idx * CONFIG.zGap });
                 idx++;
@@ -258,8 +165,8 @@ export default function TechStack() {
                 items.push({
                     el,
                     type: "star",
-                    x: (Math.random() - 0.5) * 2600,
-                    y: (Math.random() - 0.5) * 2600,
+                    x: (Math.random() - 0.5) * 2000,
+                    y: (Math.random() - 0.5) * 2000,
                     baseZ: -Math.random() * totalDepth,
                 });
             }
@@ -297,22 +204,19 @@ export default function TechStack() {
                 vel.v += (vel.target - vel.v) * CONFIG.velLerp;
 
                 const cameraZ = internal.value * CONFIG.camSpeed;
-
-                const tiltX = mouse.y * 5 - vel.v * CONFIG.tiltMul;
-                const tiltY = mouse.x * 5;
+                const tiltX = mouse.y * 3 - vel.v * CONFIG.tiltMul;
+                const tiltY = mouse.x * 3;
 
                 worldEl.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-
-                const fov = CONFIG.baseFov - Math.min(Math.abs(vel.v) * 220, 520);
-                viewportEl.style.perspective = `${fov}px`;
+                viewportEl.style.perspective = `${CONFIG.baseFov}px`;
 
                 items.forEach((item) => {
                     const vizZ = item.baseZ + cameraZ;
 
                     let alpha = 1;
-                    if (vizZ < -3000) alpha = 0;
-                    else if (vizZ < -2000) alpha = (vizZ + 3000) / 1000;
-                    if (vizZ > 100 && item.type !== "star") alpha = 1 - (vizZ - 100) / 400;
+                    if (vizZ < -2500) alpha = 0;
+                    else if (vizZ < -1500) alpha = (vizZ + 2500) / 1000;
+                    if (vizZ > 100 && item.type !== "star") alpha = 1 - (vizZ - 100) / 300;
 
                     alpha = clamp(alpha, 0, 1);
                     item.el.style.opacity = alpha;
@@ -321,19 +225,13 @@ export default function TechStack() {
                     let trans = `translate3d(${item.x || 0}px, ${item.y || 0}px, ${vizZ}px)`;
 
                     if (item.type === "star") {
-                        const stretch = Math.max(1, Math.min(1 + Math.abs(vel.v) * 18, 10));
+                        const stretch = Math.max(1, Math.min(1 + Math.abs(vel.v) * 15, 8));
                         trans += ` scale3d(1, 1, ${stretch})`;
                     } else if (item.type === "text") {
                         trans += ` rotateZ(${item.rot || 0}deg)`;
-                        if (Math.abs(vel.v) > 0.02) {
-                            const offset = clamp(vel.v * CONFIG.shadowMul, -40, 40);
-                            item.el.style.textShadow = `${offset}px 0 var(--hs-accent), ${-offset}px 0 #ffffff`;
-                        } else {
-                            item.el.style.textShadow = "none";
-                        }
                     } else {
                         const t = gsap.ticker.time;
-                        const float = Math.sin(t + (item.x || 0)) * 10;
+                        const float = Math.sin(t + (item.x || 0)) * 8;
                         trans += ` rotateZ(${item.rot || 0}deg) rotateY(${float}deg)`;
                     }
 
@@ -342,7 +240,6 @@ export default function TechStack() {
             };
 
             gsap.ticker.add(render);
-
             raf = requestAnimationFrame(() => ScrollTrigger.refresh());
 
             cleanup = () => {
@@ -355,7 +252,6 @@ export default function TechStack() {
         };
 
         build();
-
         const onResize = () => build();
         window.addEventListener("resize", onResize);
 
@@ -367,12 +263,10 @@ export default function TechStack() {
 
     return (
         <section ref={sectionRef} className="hs-section" id="skills">
-
             <div className="hs-header">
                 <p className="hs-kicker">03. TECH STACK</p>
                 <h2 className="hs-title">TECHNICAL EXPERTISE</h2>
-                <p className="hs-desc">A curated set of technologies I use to ship fast, scalable products—clean UI, solid backend, reliable cloud,
-                    and automation.</p>
+                <p className="hs-desc">A curated set of technologies I use to ship fast, scalable products—clean UI, solid backend, reliable cloud, and automation.</p>
             </div>
             <div ref={viewportRef} className="hs-viewport">
                 <div ref={worldRef} className="hs-world" />

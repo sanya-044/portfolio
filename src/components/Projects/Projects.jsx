@@ -1,43 +1,51 @@
-import React from "react";
+ import React from "react";
 import "./Projects.scss";
 
 const PROJECTS = [
   {
-  title: "GSAP Portfolio — React + GSAP",
-  desc: "Designed and built a high-performance animated portfolio using React and GSAP. Implemented ScrollTrigger-based section pinning, scrubbed timelines, parallax/zoom effects, and smooth anchor navigation. Built reusable motion patterns, responsive layouts, and optimized rendering with will-change, transform-based animations, and cleanup-safe GSAP hooks for consistent behavior across refresh/resize.",
-  image: "/assets/images/common/portfolio-image.png",
-  tags: ["React", "GSAP", "ScrollTrigger", "SCSS", "Vite"],
-  links: [
-    { label: "Live Demo", href: "https://sisvanth-gsap-portfolio.vercel.app/", icon: "↗" },
-    { label: "Source Code", href: "https://github.com/SisvanthkumarS/GSAP-Portfolio", icon: "⌂" },
-  ]
-}
-,
-  {
-    title: "Dining Concierge Chatbot — AWS",
-    desc: "Built a production-style serverless dining recommendation system leveraging AWS cloud-native services. Implemented a decoupled microservices architecture using API Gateway, Lex, Lambda, SQS, OpenSearch, DynamoDB, SES, and EventBridge.",
-    image: "/assets/images/common/chatbot-cover.png",
-   tags: ["AWS", "Lex", "Lambda", "API Gateway", "SQS", "DynamoDB", "OpenSearch"],
+    title: "MERN Stack Chat Application",
+    desc: "Built a real-time messaging platform enabling instant peer-to-peer and group communication. Implemented secure user authentication, message persistence with MongoDB, instant socket connections using Socket.io, and a responsive frontend interface.",
+    image: "/assets/images/common/chat.png",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Tailwind CSS"],
     links: [
-      { label: "Live Demo", href: "https://amanns-dining-concierge-nyc.s3.us-east-1.amazonaws.com/index.html", icon: "↗" },
-      { label: "Source Code", href: "https://github.com/SisvanthkumarS/dining-concierge-chatbot", icon: "⌂" },
+      { label: "Live Demo", href: "https://ca-8.onrender.com", icon: "↗" },
+      { label: "Source Code", href: "https://github.com/sanya-044/CA.git", icon: "⌂" },
     ],
   },
+  {
+    title: "Laundry Management & Booking Website",
+    desc: "Developed a full-featured web application for scheduling laundry pickup and delivery services in a Team. Features include service selection, order tracking, user dashboards, and responsive layout styling optimized for seamless mobile and desktop usage.",
+    image: "/assets/images/common/laundary.png",
+    tags: ["React", "JavaScript", "CSS3", "Node.js", "Express"],
+    links: [
+      { label: "Live Demo", href: "https://ath-laundary.vercel.app/", icon: "↗" },
+      { label: "Source Code", href: "https://github.com/Ayush110704/AthLaundary.git", icon: "⌂" },
+    ],
+  },
+  {
+    title: "Fashion-Oasis",
+    desc: "Developed a full-stack fashion web application for scheduling and placing orders of jewellerys in a team .Features include service selection , order tracking ,order wishlisting , product management, customer and admin dashboard with responsiveness" ,
+    image: "/assets/images/common/fashion.png",
+    tags: ["React", "Node.js", "MongoDB"],
+    links: [
+      { label: "Live Demo", href: "https://github.com/yaminibisen2005-cell/Fashion-oasis.git", icon: "↗" },
+      { label: "Source Code", href: "https://github.com/your-username/your-repo.git", icon: "⌂" },
+    ],
+  },
+  
 ];
 
 export default function Projects() {
   return (
     <section className="projects" id="projects">
-      {/* Header like your Certifications screenshot */}
       <div className="sectionHeader">
         <p className="sectionKicker">04. PROJECTS</p>
-        <h2 className="sectionTitle">PROJECTS </h2>
+        <h2 className="sectionTitle">PROJECTS</h2>
         <p className="sectionSub">
-          A selection of builds that showcase frontend motion craft and cloud-first architecture.
+          A selection of full-stack builds showcasing scalable backend architecture and responsive user interfaces.
         </p>
       </div>
 
-      {/* Cards like your first screenshot */}
       <div className="projectsGrid">
         {PROJECTS.map((p) => (
           <article className="projectCard" key={p.title}>

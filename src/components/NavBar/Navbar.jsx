@@ -83,8 +83,8 @@ const Navbar = () => {
           <li>
             <a
               className="download-button"
-              href="/assets/files/Sisvanthkumar_Sathivadivel__SweResume.pdf"
-              download="Sisvanthkumar_Sathivadivel__SweResume.pdf"
+              href="/assets/files/sanyaChauhan_resume.pdf"
+              download="sanyaChauhan_resume.pdf"
             >
               RESUME
             </a>

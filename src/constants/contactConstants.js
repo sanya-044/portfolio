@@ -1,2 +1,2 @@
-export const mobileNumber = "+1-(646)-623-5098";
-export const email = "ss20103@nyu.edu";
+export const mobileNumber = "+91 6201945659";
+export const email = "sanyachauhan453@gmail.com";

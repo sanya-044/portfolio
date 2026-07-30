@@ -2,13 +2,7 @@ import React from "react";
 import "./Contact.scss";
 import { mobileNumber, email } from "../../constants/contactConstants";
 
-/**
- * @author Sisvanthkumar Sathivadivel
- * @description Contact component for the portfolio website. This section includes a form for visitors to get in touch, as well as contact information and social media links.
- * @returns Contact section with a form to get in touch, including contact information and social links.
- * The form submits to Formspree for handling contact messages.
- * 
- */
+ 
 export default function Contact() {
   return (
     <section className="contact" id="contact">
@@ -47,7 +41,7 @@ export default function Contact() {
         <div className="contact__card">
           <form
             className="contact__form"
-            action="https://formspree.io/f/mqedddzp"  // 👈 replace with your Formspree endpoint
+            action="https://formspree.io/f/mvzenapp"  // 👈 replace with your Formspree endpoint
             method="POST"
             onKeyDownCapture={(e) => {
               const isField =
@@ -108,12 +102,12 @@ export default function Contact() {
       <div className="contact__footer">
         <div className="contact__footerInner">
           <div className="contact__copyright">
-            © {new Date().getFullYear()} Sisvanthkumar Sathivadivel. All rights reserved.
+            © {new Date().getFullYear()} Sanya Chauhan. All rights reserved.
           </div>
 
           <div className="contact__links">
             <a
-              href="https://www.linkedin.com/in/sisvanth-kumar-96a29418a/"
+              href="https://www.linkedin.com/in/sanya-chauhan-034899275/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -121,7 +115,7 @@ export default function Contact() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/SisvanthkumarS?tab=repositories&q=&type=public&language=&sort="
+              href="https://github.com/sanya-044"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"

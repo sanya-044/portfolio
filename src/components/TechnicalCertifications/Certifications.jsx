@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -6,11 +6,6 @@ import "./Certifications.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/**
- * @author Sisvanthkumar Sathivadivel
- * Certifications component that showcases professional certifications with an interactive scroll experience.
- * @returns {JSX.Element} The rendered Certifications component.
- */
 const Certifications = () => {
   const sectionRef = useRef(null);
 
@@ -99,7 +94,7 @@ const Certifications = () => {
       const st = ScrollTrigger.create({
         trigger: root,
         start: "top top",
-        end: () => "+=" + count * 0.8 * window.innerHeight, // refresh-safe
+        end: () => "+=" + count * 0.8 * window.innerHeight,
         pin: true,
         scrub: true,
         anticipatePin: 1,
@@ -122,31 +117,30 @@ const Certifications = () => {
     <section className="section pin-section" id="certification" ref={sectionRef}>
       <div className="certification-header">
         <p className="sub-heading">05. CERTIFICATIONS</p>
-        <h2>CERTIFICATIONS AND HONORS</h2>
+        <h2>CERTIFICATIONS & HONORS</h2>
         <p className="certification-description">
-          Skill milestones that back up the work—verified knowledge in development, architecture, and deployment best
-          practices.
+          Milestones backing up technical execution—verified expertise in AI agents, data simulation, and hackathon innovation.
         </p>
       </div>
 
       <div className="content">
         <ul className="certification-list">
-          <li>AWS - Developer Associate</li>
-          <li>CDW Certified UI Developer</li>
-          <li>Sailpoint Ambassador</li>
+          <li>Oracle Agentic AI Foundations Associate</li>
+          <li>Tata Forage GenAI Data Analytics Simulation</li>
+          <li>SOA Ideathon & Smart India Hackathon Nomination</li>
         </ul>
 
         <div className="fill" />
 
         <div className="right">
           <div className="slide center">
-            <img src="/assets/images/certificates/aws-developer-associate.jpg" alt="" />
+            <img src="/assets/images/certificates/oracle.png" alt="Oracle Agentic AI Certificate" />
           </div>
           <div className="slide center">
-            <img src="/assets/images/certificates/UIBC.png" alt="" />
+            <img src="/assets/images/certificates/oracleReal.png" alt="Tata GenAI Data Analytics Certificate" />
           </div>
           <div className="slide center">
-            <img src="/assets/images/certificates/sailpoint-ambassador.png" alt="" />
+            <img src="/assets/images/certificates/sih.png" alt="SOA Ideathon SIH Certificate" />
           </div>
         </div>
       </div>

@@ -9,10 +9,7 @@ import { aboutmeDescription } from "../../constants/aboutmeConstants";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/**
- * @author Sisvanthkumar Sathivadivel
- * @returns WhoAmI component that introduces the portfolio owner with a description and an image. The description text animates into view word by word as the user scrolls, creating an engaging introduction to the portfolio. The component uses GSAP for scroll-triggered animations and SplitType for splitting the text into words for individual animation control.
- */
+ 
 const WhoAmI = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);

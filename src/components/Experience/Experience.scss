@@ -1,4 +1,4 @@
-.journey {
+ .journey {
   position: relative;
   width: 100%;
   color: #fff;
@@ -43,7 +43,6 @@
   width: 100%;
   padding: 0 clamp(14px, 4vw, 60px);
 
-  
   &-line {
     position: absolute;
     left: 50%;
@@ -158,8 +157,8 @@
 }
 
 @media (max-width: 900px) {
-  .timeline{
-    .timeline-line{
+  .timeline {
+    .timeline-line {
       display: none;
     }
   }
@@ -189,15 +188,12 @@
   }
 }
 
-
-/* ✅ Very small phones: tighten spacing */
 @media (max-width: 420px) {
   .tl-desc {
     line-height: 1.7;
   }
 }
 
-/* reduce motion */
 @media (prefers-reduced-motion: reduce) {
   .tl-card {
     filter: none !important;

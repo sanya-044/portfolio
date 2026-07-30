@@ -1,6 +1,4 @@
-// 
-
-import React, { useRef } from "react";
+ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -10,53 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TIMELINE = [
   {
-    date: "JUN 2018 – MAY 2022",
-    title: "B.Tech. in Information Technology",
-    org: "Velammal Institute of Technology",
-    desc:
-      "Graduated with CGPA 8.45/10. Core coursework: DSA, Operating Systems, Database Systems, Cloud Computing.",
+    date: "2023 – 2027",
+    title: "B.Tech. in Computer Science and Engineering",
+    org: "ITER, Siksha 'O' Anusandhan, Bhubaneswar",
+    desc: "Currently pursuing B.Tech in CSE with a CGPA of 7.9. Core coursework includes Data Structures & Algorithms (DSA), Java, and Python.",
   },
   {
-    date: "FEB 2022 – JUN 2022",
-    title: "Software Engineer Intern",
-    org: "CDW Corporation, India",
-    desc:
-      "Built full-stack features (React + Java + Spring Boot) for an internal social network, including an automated birthday scheduler that boosted daily engagement by 40%.",
-  },
-  {
-    date: "JUN 2022 – OCT 2023",
-    title: "Software Engineer Trainee",
-    org: "CDW Corporation, India",
-    desc:
-      "Built scalable React modules with 92% unit/component test coverage; modernized 5+ microservices (1800-Flowers) reducing latency from 2s → 0.5s; improved CI/CD reliability by 15%; delivered backend APIs for judiciary e-filing + PDF automation (State of Utah).",
-  },
-  {
-    date: "OCT 2023 – OCT 2024",
-    title: "Software Engineer",
-    org: "CDW Corporation, India",
-    desc:
-      "Engineered IDN Accelerator plugin (Vanilla JS) cutting API calls by 35% and improving workflow efficiency by 30%; owned onsite Spring Boot + PrimeFaces module delivery for NY Presbyterian Hospital; refactored UI into reusable React components improving load time by 20% and reducing redundant code by 30%; mentored 2 engineers (25% faster ramp-up).",
-  },
-  {
-    date: "2025",
-    title: "AWS Certified Developer – Associate",
-    org: "Amazon Web Services",
-    desc:
-      "Earned AWS DVA-C02 certification validating skills in developing and deploying cloud-native applications on AWS.",
-  },
-  {
-    date: "SEP 2025 – PRESENT",
-    title: "M.S. in Computer Science",
-    org: "New York University (NYU), New York, NY",
-    desc:
-      "Coursework: Design & Analysis of Algorithms, Human Computer Interaction, Big Data, Cloud Computing. Seeking Software Engineering Internship roles.",
+    date: "RECENT EXPERIENCE",
+    title: "MERN Stack Developer Intern",
+    org: "Athenura",
+    desc: "Worked as a MERN Stack Developer, building and optimizing responsive full-stack features, integrating backend APIs, and refining web application architecture.",
   },
 ];
 
-/**
- * @author Sisvanthkumar Sathivadivel
- * @returns Experience component that renders a vertical timeline of professional milestones. Each timeline item animates into view as the user scrolls, with a line that fills up to indicate progress through the timeline. The component uses GSAP for scroll-triggered animations, creating an engaging way to showcase career highlights and achievements.
- */
 export default function Experience() {
   const sectionRef = useRef(null);
   const timelineRef = useRef(null);
@@ -142,17 +106,15 @@ export default function Experience() {
 
   return (
     <section className="journey" ref={sectionRef} id="timeline">
-      {/* Hero heading like your video */}
       <div className="journey-hero">
         <p className="journey-kicker">02. JOURNEY</p>
         <h2 className="journey-title">Professional Path</h2>
         <p className="journey-sub">
-          A timeline of key milestones—training, internships, and production roles
+          A timeline of key milestones—academic background, internships, and development roles
           focused on scalable web platforms.
         </p>
       </div>
 
-      {/* Timeline */}
       <div className="timeline" ref={timelineRef}>
         <div className="timeline-line">
           <span className="timeline-line-bg" />

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&family=Syncopate:wght@400;700&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&family=Syncopate:wght@400;700&display=swap");
 
 :root {
   --hs-bg: #030303;
@@ -16,31 +16,29 @@
 .hs-section {
   position: relative;
   width: 100%;
-  height: 100svh; 
+  min-height: 100vh;
   color: var(--hs-text);
   overflow: hidden;
   isolation: isolate;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px; /* Gives clearance below your fixed navbar */
 }
 
 .hs-header {
   position: relative;
-  z-index: 5;         
-  pointer-events: none; 
+  z-index: 10;        
+  pointer-events: auto; 
   text-align: center;
   width: min(92vw, 1110px);
   margin: 0 auto;
-  padding: clamp(18px, 4vw, 44px) clamp(16px, 4vw, 40px) 0;
-
-  background: radial-gradient(
-    1200px 420px at 50% 0%,
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0)
-  );
+  padding: 0 20px;
+  flex-shrink: 0;
 }
 
 .hs-kicker {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
@@ -51,58 +49,32 @@
 }
 
 .hs-title {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   font-family: "Inter", sans-serif;
   font-weight: 800;
   line-height: 0.92;
   color: #fff;
-  font-size: clamp(2.2rem, 10vw, 5.5rem);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
 }
 
 .hs-desc {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 60ch;
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  line-height: 1.65;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.62);
-
-
-  font-size: clamp(0.95rem, 3.4vw, 1.05rem);
-}
-
-@media (max-width: 520px) {
-  .hs-header {
-    width: 100%;
-    padding: 16px 16px 0;
-    text-align: center;
-  }
-
-  .hs-title {
-    max-width: 12ch;
-    font-size: clamp(2rem, 11vw, 3.2rem);
-  }
-
-  .hs-desc {
-    max-width: 42ch;
-  }
-}
-
-@media (max-height: 700px) {
-  .hs-header {
-    padding-top: 12px;
-  }
-
-  .hs-desc {
-    display: none; 
-  }
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .hs-viewport {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: 100%;
+  height: 65vh; /* Controlled viewport height so the 3D world stays centered nicely */
   perspective: 700px; 
   overflow: hidden;
   z-index: 1;
+  margin-top: 20px;
 }
 
 .hs-world {
@@ -135,14 +107,10 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
 
-
-  font-size: clamp(3.2rem, 12vw, 10rem);
+  font-size: clamp(3rem, 10vw, 8rem);
   letter-spacing: clamp(-0.1rem, -1vw, -0.5rem);
-
-  mix-blend-mode: normal;
   opacity: 0.9;
 }
-
 
 .hs-card {
   background: var(--hs-card-bg);
@@ -161,10 +129,9 @@
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translate(-50%, -50%);
 
-  /* ✅ responsive sizing */
-  width: clamp(220px, 70vw, 320px);
-  height: clamp(300px, 85vw, 460px);
-  padding: clamp(1rem, 4vw, 2rem);
+  width: clamp(220px, 25vw, 290px);
+  height: clamp(320px, 35vw, 410px);
+  padding: 1.5rem;
 }
 
 @media (hover: hover) {
@@ -173,15 +140,6 @@
     box-shadow: 0 0 30px rgba(196, 107, 31, 0.22);
     background: rgba(20, 20, 20, 0.8);
     z-index: 100;
-  }
-}
-
-
-@media (hover: none) {
-  .hs-card:hover {
-    border-color: var(--hs-border);
-    background: var(--hs-card-bg);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), 0 20px 50px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -220,8 +178,8 @@
 
 .hs-card-header {
   border-bottom: 1px solid var(--hs-border);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -231,12 +189,12 @@
 .hs-card-id {
   font-family: var(--hs-font-code);
   color: var(--hs-accent);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .hs-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: var(--hs-accent);
 }
 
@@ -246,18 +204,14 @@
   font-weight: 700;
   color: #fff;
   margin: 0;
-
-  /* ✅ responsive */
-  font-size: clamp(1.4rem, 6vw, 2.5rem);
+  font-size: clamp(1.3rem, 3vw, 2rem);
   line-height: 0.95;
-
-  mix-blend-mode: normal;
 }
 
 .hs-card-meta {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   font-family: var(--hs-font-code);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -266,22 +220,21 @@
 .hs-card-footer {
   margin-top: auto;
   font-family: var(--hs-font-code);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.4);
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .hs-card-ghost {
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  font-size: 4rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 3rem;
   opacity: 0.1;
   font-weight: 900;
 }
-
 
 .hs-star {
   position: absolute;
@@ -294,17 +247,8 @@
 .hs-tech-icon {
   object-fit: contain;
   display: block;
-  margin: clamp(18px, 5vw, 50px) auto 14px;
+  margin: 15px auto 10px;
   transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
-
-
-  width: clamp(44px, 12vw, 75px);
-  height: clamp(44px, 12vw, 75px);
-}
-
-@media (hover: hover) {
-  .hs-card:hover .hs-tech-icon {
-    transform: scale(1.08);
-    opacity: 1;
-  }
+  width: 50px;
+  height: 50px;
 }
