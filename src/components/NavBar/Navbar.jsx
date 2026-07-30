@@ -112,12 +112,12 @@ const Navbar = () => {
           </a>
         ))}
         <a
-              className="download-button"
-              href="/assets/files/Sisvanthkumar_Sathivadivel__SweResume.pdf"
-              download="Sisvanthkumar_Sathivadivel__SweResume.pdf"
-            >
-              RESUME
-            </a>
+          className="download-button"
+          href="/assets/files/sanyaChauhan_resume.pdf"
+          download="sanyaChauhan_resume.pdf"
+        >
+          RESUME
+        </a>
       </div>
     </nav>
   );
