@@ -28,8 +28,8 @@ const PROJECTS = [
     image: "/assets/images/common/fashion.png",
     tags: ["React", "Node.js", "MongoDB"],
     links: [
-      { label: "Live Demo", href: "https://github.com/yaminibisen2005-cell/Fashion-oasis.git", icon: "↗" },
-      { label: "Source Code", href: "https://fashion-oasis-zeta.vercel.app/", icon: "⌂" },
+      { label: "Live Demo", href: "https://fashion-oasis-zeta.vercel.app/", icon: "↗" },
+      { label: "Source Code", href: "https://github.com/yaminibisen2005-cell/Fashion-oasis.git", icon: "⌂" },
     ],
   },
   
