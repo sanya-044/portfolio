@@ -14,7 +14,7 @@ const PROJECTS = [
   },
   {
     title: "Laundry Management & Booking Website",
-    desc: "Developed a full-featured web application for scheduling laundry pickup and delivery services in a Team. Features include service selection, order tracking, user dashboards, and responsive layout styling optimized for seamless mobile and desktop usage.",
+    desc: "Developed a full-featured web application at Athenura for scheduling laundry pickup and delivery services in a Team. Features include service selection, order tracking, user dashboards, and responsive layout styling optimized for seamless mobile and desktop usage.",
     image: "/assets/images/common/laundary.png",
     tags: ["React", "JavaScript", "CSS3", "Node.js", "Express"],
     links: [
@@ -24,7 +24,7 @@ const PROJECTS = [
   },
   {
     title: "Fashion-Oasis",
-    desc: "Developed a full-stack fashion web application for scheduling and placing orders of jewellerys in a team .Features include service selection , order tracking ,order wishlisting , product management, customer and admin dashboard with responsiveness" ,
+    desc: "Developed a full-stack fashion web application at Athenura for scheduling and placing orders of jewellerys in a team .Features include service selection , order tracking ,order wishlisting , product management, customer and admin dashboard with responsiveness" ,
     image: "/assets/images/common/fashion.png",
     tags: ["React", "Node.js", "MongoDB"],
     links: [
