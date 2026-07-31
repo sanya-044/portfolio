@@ -17,7 +17,29 @@ const TIMELINE = [
     date: "RECENT EXPERIENCE",
     title: "MERN Stack Developer Intern",
     org: "Athenura",
-    desc: "Worked as a MERN Stack Developer, building and optimizing responsive full-stack features, integrating backend APIs, and refining web application architecture.",
+    desc: (
+      <>
+        Worked as a MERN Stack Developer, building and optimizing responsive full-stack features, integrating backend APIs, and refining web application architecture at{" "}
+        <a 
+          href="https://athenura.in" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ color: '#f97316', textDecoration: 'underline' }}
+        >
+          Athenura
+        </a>
+        {" "}(
+        <a 
+          href="https://www.linkedin.com/company/athenura/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ color: '#f97316', textDecoration: 'underline' }}
+        >
+          LinkedIn
+        </a>
+        ).
+      </>
+    ),
   },
 ];
 
